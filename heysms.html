@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HeySMS — Anastasiia Dronova</title>
+  <meta name="description" content="HeySMS, a global messaging platform for 50M+ SMS a month: system architecture, API landing, client dashboard, admin panel, authentication flows and branding. Case study by UI/UX designer Anastasiia Dronova.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="case case--heysms">
+  <div class="case-page">
+    <header class="case-header">
+      <a class="case-header__logo" href="index.html" aria-label="Dronova — main page">
+        <img src="assets/logo-dronova.svg" alt="Dronova" width="150" height="23">
+      </a>
+      <a class="case-header__contact" href="https://t.me/nastuskas" target="_blank" rel="noopener">Send me a message</a>
+    </header>
+
+    <nav class="case-nav" aria-label="Projects">
+      <a class="case-nav__link" href="index.html">
+        <img class="case-nav__arrow" src="assets/arrow-left.svg" alt="" width="24" height="24">
+        <span>Back to main page</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="my-global-flowers.html">
+        <span>To the next project</span>
+        <img class="case-nav__arrow case-nav__arrow--next" src="assets/arrow-left.svg" alt="" width="24" height="24">
+      </a>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="hs-hero">
+        <h1 class="case-title hs-title">A Global Messaging Platform</h1>
+        <div class="hs-hero__row">
+          <p class="hs-hero__text">HeySMS's mission was to create a scalable messaging platform to handle massive volumes and complex client needs. We developed the system architecture, API, client dashboard, and internal admin panel.</p>
+          <dl class="hs-facts">
+            <div><dt>50 M+</dt><dd>SMS/month</dd></div>
+            <div><dt>170+</dt><dd>countries</dd></div>
+          </dl>
+        </div>
+        <img class="hs-banner" src="assets/heysms/banner.webp" alt="HEY! SMS logo on a green background with diagonal stripes" width="1388" height="540" fetchpriority="high">
+      </section>
+
+      <!-- Building -->
+      <section class="case-section">
+        <h2 class="case-heading" style="--heading-max: 800px">Building the project for <span class="hs-accent">50&nbsp;M+</span> monthly messages</h2>
+        <p class="case-text case-section__text" style="--text-max: 640px">HeySMS needed a complete platform to support enterprise-grade delivery, while staying intuitive for day-to-day use. From account management to billing and support, the experience had to work seamlessly for teams operating across time zones and use cases.</p>
+        <figure class="hs-figure hs-figure--admin reveal" data-reveal>
+          <img src="assets/heysms/admin-panel.webp" alt="Admin panel: account settings and banking details" width="684" height="433" loading="lazy" decoding="async">
+          <figcaption class="fd-caption">Admin panel</figcaption>
+        </figure>
+      </section>
+
+      <!-- Built for control -->
+      <section class="case-section">
+        <h2 class="case-heading" style="--heading-max: 800px">Built for control, clarity, and scale</h2>
+        <p class="case-text case-section__text" style="--text-max: 660px">The architecture handles massive traffic while keeping the user flow clean and easy to navigate. Each interface was designed to simplify operations, not mask complexity, but organize it.</p>
+        <img class="case-media hs-landing" src="assets/heysms/landing.webp" alt="HeySMS landing page in a laptop: “Reliable and Fast SMS API for Your Business”" width="1392" height="634" loading="lazy" decoding="async">
+        <figure class="hs-figure hs-figure--wide">
+          <div class="hs-pair">
+            <img src="assets/heysms/main-page.webp" alt="Main page visual: paper plane and +999 SMS" width="685" height="685" loading="lazy" decoding="async">
+            <img src="assets/heysms/mobile-app.webp" alt="Mobile version: “Aim the solution you need”" width="685" height="685" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="fd-caption">Interface of the main page and the mobile version</figcaption>
+        </figure>
+        <p class="case-text hs-note">During website development, I structured and systematized the UI kit, establishing a consistent design system. All design tokens were documented in Figma, ensuring consistency across components, streamlining design workflows.</p>
+      </section>
+
+      <!-- Authentication -->
+      <section class="case-section">
+        <h2 class="case-heading" style="--heading-max: 800px">Authentication &amp; account recovery flows</h2>
+        <p class="case-text case-section__text" style="--text-max: 790px">Designed comprehensive authentication flows, including login, email verification, and password reset. Each flow was carefully developed to ensure a seamless and intuitive user experience, with all possible states, validation scenarios, error messages, and success notifications thoroughly considered. The result is a consistent and reliable system that guides users smoothly through every step of the authentication process.</p>
+        <div class="hs-duo">
+          <figure class="reveal" data-reveal>
+            <img src="assets/heysms/auth-login.webp" alt="Login screen with the email field in focus" width="684" height="433" loading="lazy" decoding="async">
+            <figcaption class="fd-caption">Login / Email Field Focus</figcaption>
+          </figure>
+          <figure class="reveal" data-reveal>
+            <img src="assets/heysms/auth-error.webp" alt="Login screen with a generic error message" width="684" height="433" loading="lazy" decoding="async">
+            <figcaption class="fd-caption">If an unverified user attempts to log in, display a generic error message without providing specific details (an information security requirement).</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Section design -->
+      <section class="case-section">
+        <h2 class="case-heading" style="--heading-max: 800px">Section design &amp; logic development</h2>
+        <p class="case-text case-section__text" style="--text-max: 760px">Designed key interface sections and collaborated with analysts to define the implementation logic for sender ID management and filtering.</p>
+        <div class="hs-duo">
+          <figure class="reveal" data-reveal>
+            <img src="assets/heysms/sender-ids.webp" alt="Table with the list of Sender IDs" width="684" height="433" loading="lazy" decoding="async">
+            <figcaption class="fd-caption">Default state of the table containing the list of Sender IDs</figcaption>
+          </figure>
+          <figure class="reveal" data-reveal>
+            <img src="assets/heysms/sender-filters.webp" alt="Filter sidebar with sub-accounts selected" width="684" height="433" loading="lazy" decoding="async">
+            <figcaption class="fd-caption">Filter Sidebar States/10 sub-accounts selected; disabling other options.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Branding -->
+      <section class="hs-split hs-branding">
+        <div>
+          <h2 class="case-heading case-heading--left">Branding &amp; media positioning</h2>
+          <p class="hs-branding__text">A distinctive visual style was developed for the brand’s media presence, built around green and a signature diagonal stripe. Each visual communicates the simplicity of sending SMS messages and managing them efficiently.</p>
+        </div>
+        <img class="hs-branding__img" src="assets/heysms/branding.webp" alt="Two phones over “HEY! We are waiting for you!”" width="449" height="517" loading="lazy" decoding="async">
+      </section>
+
+      <!-- Result -->
+      <section class="hs-split hs-result" data-reveal>
+        <h2 class="case-heading case-heading--left">Result</h2>
+        <dl class="mgf-stats hs-result__stats">
+          <div class="mgf-stat"><dt>Custom B2B SaaS product</dt><dd>Launched a fully</dd></div>
+          <div class="mgf-stat"><dt>Created a flexible admin system</dt><dd>to support client growth</dd></div>
+          <div class="mgf-stat"><dt>50 M+</dt><dd>SMS/month</dd></div>
+          <div class="mgf-stat"><dt>170+</dt><dd>countries</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <nav class="case-nav case-nav--bottom hs-bottom-nav" aria-label="Projects">
+      <a class="case-nav__link" href="index.html">
+        <img class="case-nav__arrow" src="assets/arrow-left.svg" alt="" width="24" height="24">
+        <span>Back to main page</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="my-global-flowers.html">
+        <span>To the next project</span>
+        <img class="case-nav__arrow case-nav__arrow--next" src="assets/arrow-left.svg" alt="" width="24" height="24">
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anastasiia Dronova — UI/UX Designer</title>
+  <meta name="description" content="Anastasiia Dronova — UI/UX designer with 5+ years of experience in a marketing agency and an IT company: websites, landings, branding, logo, social media.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Manrope:wght@600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <div class="page__bg" aria-hidden="true">
+      <img class="page__blob page__blob--1" src="assets/bg-blob-1.webp" alt="" width="966" height="854">
+      <img class="page__blob page__blob--2" src="assets/bg-blob-2.webp" alt="" width="822" height="719">
+    </div>
+
+    <header class="hero">
+      <a class="contact-tile hero__photo" href="https://t.me/nastuskas" target="_blank" rel="noopener" aria-label="Anastasiia Dronova — contact me on Telegram">
+        <span class="contact-tile__frame hero__photo-frame"><img src="assets/portrait.webp" alt="Anastasiia Dronova" width="330" height="330" fetchpriority="high"></span>
+        <span class="card__cursor" aria-hidden="true"><span class="card__button">Contact me</span></span>
+      </a>
+
+      <div class="hero__intro">
+        <h1 class="hero__name">Anastasiia<br>Dronova</h1>
+        <p class="hero__role">UI/UX designer with 5+ years experience</p>
+        <p class="hero__place">Marketing agency and IT companies</p>
+        <ul class="tags" aria-label="Skills">
+          <li class="tag">Websites</li>
+          <li class="tag">Landings</li>
+          <li class="tag">Branding</li>
+          <li class="tag">Logo</li>
+          <li class="tag">Social Media</li>
+        </ul>
+      </div>
+
+      <nav class="contacts" aria-label="Contacts">
+        <a class="contact-tile" href="https://t.me/nastuskas" target="_blank" rel="noopener" aria-label="Contact me on Telegram">
+          <span class="contact-tile__frame"><img src="assets/icon-telegram.webp" alt="" width="153" height="142"></span>
+          <span class="card__cursor" aria-hidden="true"><span class="card__button">Contact me</span></span>
+        </a>
+        <a class="contact-tile" href="https://www.linkedin.com/in/anastasiia-dronova-7bb315264/" target="_blank" rel="noopener" aria-label="Open LinkedIn profile">
+          <span class="contact-tile__frame"><img src="assets/icon-linkedin.webp" alt="" width="153" height="142"></span>
+          <span class="card__cursor" aria-hidden="true"><span class="card__button">Open LinkedIn</span></span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="projects" aria-label="Projects">
+        <a class="card card--nda" href="it-company-cyprus.html">
+          <div class="card__art">
+            <img class="card__img card__finger" src="assets/card-nda.webp" alt="" width="660" height="766" decoding="async">
+            <svg class="card__deco card__deco--nda-rings nda-button" viewBox="0 0 331 331" aria-hidden="true">
+              <circle class="nda-button__halo" cx="165.5" cy="165.5" r="165.5" fill="#F0E9E8" opacity="0.07"/>
+              <circle class="nda-button__ripple" cx="165.5" cy="165.5" r="40.5" fill="none" stroke="#fff" stroke-width="2"/>
+              <circle class="nda-button__ring" cx="165.5" cy="165.5" r="40.5" fill="#F0E9E8" opacity="0.33"/>
+              <circle class="nda-button__dot" cx="165.5" cy="165.5" r="18.5" fill="#F0E9E8"/>
+            </svg>
+          </div>
+          <span class="card__cursor" aria-hidden="true"><span class="card__button">View project</span></span>
+          <h2 class="card__title">NDA IT company<br>in cyprus</h2>
+        </a>
+
+        <a class="card card--flower" href="my-global-flowers.html">
+          <div class="card__art">
+            <img class="card__img" src="assets/card-flower.webp" alt="" width="660" height="766" decoding="async">
+            <img class="card__deco card__deco--flower-glow" src="assets/flower-glow.svg" alt="" aria-hidden="true">
+          </div>
+          <span class="card__cursor" aria-hidden="true"><span class="card__button">View project</span></span>
+          <h2 class="card__title">My global<br>flower</h2>
+        </a>
+
+        <a class="card card--freedom" href="freedom-development.html">
+          <div class="card__art">
+            <img class="card__img" src="assets/card-freedom.webp" alt="" width="660" height="766" decoding="async">
+            <span class="card__shade" aria-hidden="true"></span>
+          </div>
+          <span class="card__cursor" aria-hidden="true"><span class="card__button">View project</span></span>
+          <h2 class="card__title">Freedom<br>Development</h2>
+        </a>
+
+        <a class="card card--sms" href="heysms.html">
+          <div class="card__art">
+            <video class="card__img" src="assets/card-sms.mp4" poster="assets/card-sms-poster.webp" autoplay muted loop playsinline aria-hidden="true"></video>
+          </div>
+          <span class="card__cursor" aria-hidden="true"><span class="card__button">View project</span></span>
+          <h2 class="card__title">SMS<br>Service</h2>
+        </a>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
