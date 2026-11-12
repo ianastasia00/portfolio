@@ -375,6 +375,15 @@ a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   .card { aspect-ratio: auto; }
 }
 
+/* MacBook Pro 16" (1728px viewport): full width with 40px side margins */
+@media (min-width: 1600px) and (max-width: 1800px) {
+  .page {
+    max-width: none;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 @media (max-width: 1279px) {
   .hero { grid-template-columns: minmax(0, 240px) minmax(0, 1fr) minmax(0, 220px); }
   .hero__intro { grid-column: 2; }
