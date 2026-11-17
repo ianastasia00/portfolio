@@ -1520,29 +1520,29 @@ body.home2 {
 .bento__notification-plate {
   opacity: 0;
   transform-origin: 50% 0;
-  animation: sms-plate 7s cubic-bezier(0.32, 0.72, 0, 1) infinite;
+  animation: sms-plate 5s cubic-bezier(0.32, 0.72, 0, 1) infinite;
 }
 
 .bento__notification-content {
   opacity: 0;
-  animation: sms-content 7s ease infinite;
+  animation: sms-content 5s ease infinite;
 }
 
 @keyframes sms-plate {
-  0%, 14%  { opacity: 0; transform: translateY(-60%) scale(0.32, 0.22); filter: blur(4px); }
-  19%      { opacity: 1; filter: blur(0); }
-  26%      { transform: translateY(2%) scale(1.015, 1.03); }
-  31%      { transform: translateY(0) scale(1); }
-  82%      { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-  90%      { opacity: 0; transform: translateY(-50%) scale(0.4, 0.3); filter: blur(4px); }
+  0%, 4%   { opacity: 0; transform: translateY(-60%) scale(0.32, 0.22); filter: blur(4px); }
+  10%      { opacity: 1; filter: blur(0); }
+  18%      { transform: translateY(2%) scale(1.015, 1.03); }
+  24%      { transform: translateY(0) scale(1); }
+  86%      { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+  95%      { opacity: 0; transform: translateY(-50%) scale(0.4, 0.3); filter: blur(4px); }
   100%     { opacity: 0; transform: translateY(-60%) scale(0.32, 0.22); }
 }
 
 @keyframes sms-content {
-  0%, 25% { opacity: 0; }
-  33%     { opacity: 1; }
-  78%     { opacity: 1; }
-  83%     { opacity: 0; }
+  0%, 17% { opacity: 0; }
+  26%     { opacity: 1; }
+  82%     { opacity: 1; }
+  88%     { opacity: 0; }
   100%    { opacity: 0; }
 }
 
@@ -1576,16 +1576,21 @@ body.home2 {
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Social icons: grey by default, brand colours on hover */
-.bento__icon-svg { display: block; width: 100%; height: auto; }
-.bento__icon-bg { fill: rgba(237, 237, 237, 0.58); transition: fill 0.3s ease; }
+/* Social icons: dark glyph by default, brand colour on hover */
+.bento__icon-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.bento__icon-bg { fill: rgba(237, 237, 237, 0.58); }
 .bento__icon-glyph { fill: #20172a; transition: fill 0.3s ease; }
 
 @media (hover: hover) {
   .bento__photo:hover .bento__round img { transform: scale(1.08); }
-  .bento__icon--telegram:hover .bento__icon-bg { fill: #229ed9; }
-  .bento__icon--linkedin:hover .bento__icon-bg { fill: #0a66c2; }
-  .bento__icon:hover .bento__icon-glyph { fill: #fff; }
+  .bento__icon:hover .bento__icon-svg { transform: scale(1.12); }
+  .bento__icon--telegram:hover .bento__icon-glyph { fill: #229ed9; }
+  .bento__icon--linkedin:hover .bento__icon-glyph { fill: #0a66c2; }
 }
 
 .bento__photo:focus-visible,
