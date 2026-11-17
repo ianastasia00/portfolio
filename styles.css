@@ -1776,6 +1776,22 @@ body.home2 {
 }
 
 /* ---------- v2 responsive ---------- */
+
+/* Short laptop screens (13" MacBook Air with the browser toolbar): the profile content
+   tightens so the card keeps equal 32px padding at the top and bottom */
+@media (min-width: 1280px) and (max-height: 829px) {
+  .bento__name { margin-top: 24px; }
+  .bento__role { margin-top: 14px; }
+  .bento__tags { gap: 8px 6px; padding-top: 16px; }
+  .bento__tags li { height: 26px; padding: 0 11px; font-size: 15px; line-height: 26px; }
+}
+
+@media (min-width: 1280px) and (max-height: 779px) {
+  .bento__photo { width: 112px; }
+  .bento__icon { width: 56px; }
+  .bento__name { font-size: 40px; line-height: 42px; }
+  .bento__role { margin-top: 12px; font-size: 20px; line-height: 25px; }
+}
 @media (max-width: 1279px) {
   .bento {
     grid-template-columns: repeat(2, minmax(0, 1fr));
