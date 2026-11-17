@@ -1786,9 +1786,11 @@ body.home2 {
   .bento__tags li { height: 26px; padding: 0 11px; font-size: 15px; line-height: 26px; }
 }
 
-/* 13" MacBook Air width (1440–1470px): tighter gap between avatar and name */
+/* 13" MacBook Air width (1440–1470px): tighter gap between avatar and name,
+   the building sits 10px lower so the hover zoom doesn't reach the title */
 @media (min-width: 1400px) and (max-width: 1499px) {
   .bento__name { margin-top: 22px; }
+  .bento__freedom { bottom: -10px; }
 }
 
 @media (min-width: 1280px) and (max-height: 779px) {
