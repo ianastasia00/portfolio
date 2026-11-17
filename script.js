@@ -97,13 +97,41 @@
     window.addEventListener('resize', placePill);
   });
 
+  /* ---------- Main page v2: NDA card animation, scaled to cover the card, replays in a loop ---------- */
+  document.querySelectorAll('[data-nda-anim]').forEach(function (anim) {
+    var holder = anim.parentElement;
+    var LOOP_MS = 5600;
+    var timer = null;
+
+    function fit() {
+      var scale = Math.max(holder.clientWidth / 940, holder.clientHeight / 319);
+      anim.style.setProperty('--nda-scale', scale);
+    }
+
+    function play() {
+      clearTimeout(timer);
+      anim.classList.remove('is-playing');
+      void anim.offsetWidth; // restart the CSS animations
+      anim.classList.add('is-playing');
+      timer = setTimeout(play, LOOP_MS);
+    }
+
+    fit();
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(holder);
+    else window.addEventListener('resize', fit);
+
+    if (reduceMotion.matches) return;
+    var start = function () { requestAnimationFrame(play); };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(start); else start();
+  });
+
   /* ---------- Hover pill ("View project", gallery labels) follows the cursor ---------- */
   if (!canHover.matches) return;
   document.documentElement.classList.add('has-card-cursor');
 
   var EASE = 0.22; // share of the distance covered each frame: lower = more lag
 
-  document.querySelectorAll('.card, .fd-shot, .contact-tile').forEach(function (card) {
+  document.querySelectorAll('.card, .fd-shot, .contact-tile, .bento__card').forEach(function (card) {
     var button = card.querySelector('.card__cursor');
     if (!button) return;
 
