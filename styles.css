@@ -1500,22 +1500,50 @@ body.home2 {
 
 .bento__phone img { width: 100%; height: auto; }
 
-.bento__phone .bento__notification {
+/* Lock screen first, then the HeySMS notification unfolds: the frosted plate grows
+   from the top, the text fades in once it has landed */
+.bento__notification {
   position: absolute;
-  top: 34.574%;   /* 325 / 940 */
-  left: 11.493%;  /* 97 / 844 */
-  width: 77.488%; /* 654 / 844 */
-  opacity: 0;
-  animation: sms-arrive 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  top: 55.213%;   /* 519 / 940 */
+  left: 9.360%;   /* 79 / 844 */
+  width: 81.517%; /* 688 / 844 */
+  aspect-ratio: 688 / 182;
 }
 
-@keyframes sms-arrive {
-  0%, 8%  { opacity: 0; transform: translateY(-70%) scale(0.88); filter: blur(6px); }
-  20%     { opacity: 1; transform: translateY(4%) scale(1.01); filter: blur(0); }
-  26%     { transform: translateY(0) scale(1); }
-  80%     { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-  90%     { opacity: 0; transform: translateY(-40%) scale(0.94); filter: blur(4px); }
-  100%    { opacity: 0; transform: translateY(-70%) scale(0.88); filter: blur(6px); }
+.bento__notification img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bento__notification-plate {
+  opacity: 0;
+  transform-origin: 50% 0;
+  animation: sms-plate 7s cubic-bezier(0.32, 0.72, 0, 1) infinite;
+}
+
+.bento__notification-content {
+  opacity: 0;
+  animation: sms-content 7s ease infinite;
+}
+
+@keyframes sms-plate {
+  0%, 14%  { opacity: 0; transform: translateY(-60%) scale(0.32, 0.22); filter: blur(4px); }
+  19%      { opacity: 1; filter: blur(0); }
+  26%      { transform: translateY(2%) scale(1.015, 1.03); }
+  31%      { transform: translateY(0) scale(1); }
+  82%      { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+  90%      { opacity: 0; transform: translateY(-50%) scale(0.4, 0.3); filter: blur(4px); }
+  100%     { opacity: 0; transform: translateY(-60%) scale(0.32, 0.22); }
+}
+
+@keyframes sms-content {
+  0%, 25% { opacity: 0; }
+  33%     { opacity: 1; }
+  78%     { opacity: 1; }
+  83%     { opacity: 0; }
+  100%    { opacity: 0; }
 }
 
 /* ---------- Profile ---------- */
@@ -1617,6 +1645,7 @@ body.home2 {
   }
 
   .has-card-cursor .bento__card { cursor: none; }
+  .has-card-cursor .bento__icon { cursor: pointer; }
 }
 
 /* ---------- NDA card: "Developing products that connect & engage" animation ---------- */
@@ -1725,7 +1754,7 @@ body.home2 {
 @media (prefers-reduced-motion: reduce) {
   .bento__art,
   .bento__round img { transition: none; }
-  .bento__phone .bento__notification { animation: none; opacity: 1; }
+  .bento__notification img { animation: none; opacity: 1; }
   .nda-anim.is-playing .nda-anim__line,
   .nda-anim.is-playing .nda-anim__line path,
   .nda-anim.is-playing .nda-anim__words span { animation: none; }
