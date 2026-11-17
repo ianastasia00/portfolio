@@ -1810,7 +1810,7 @@ body.home2 {
   body.home2 { --b-radius: 28px; }
   .bento {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "profile" "flower" "freedom" "sms" "nda";
+    grid-template-areas: "profile" "nda" "freedom" "flower" "sms";
   }
   .bento__profile { aspect-ratio: auto; }
   .bento__tags { padding-top: 32px; }
